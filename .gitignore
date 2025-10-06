@@ -33,6 +33,7 @@ env/
 
 # CSV output files (optional - comment out if you want to track them)
 profiles.csv
+demo_profiles.csv
 *.csv
 
 # IDE

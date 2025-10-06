@@ -230,13 +230,41 @@ roster-backend-scraping-task/
 └── README.md             # This file
 ```
 
+## Testing
+
+### Pipeline Tests
+
+Test the data processing pipelines (email validation, brand filtering, deduplication):
+
+```bash
+python test_pipelines.py
+```
+
+### Demo Mode
+
+Run a demonstration with mock data to see how the scraper works without hitting the actual website:
+
+```bash
+python demo_scraper.py
+```
+
+This will:
+- Process 22 mock profiles
+- Apply all pipeline filters
+- Generate a `demo_profiles.csv` file
+- Display statistics about filtered/accepted profiles
+
 ### Running Tests
+
+### Integration Test
 
 Currently, the scraper can be tested by running it with debug logging:
 
 ```bash
 python run_scraper.py --log-level DEBUG --min-per-role 5
 ```
+
+Note: The actual Shoutt website URLs and selectors may need to be adjusted based on the current website structure.
 
 ## License
 
